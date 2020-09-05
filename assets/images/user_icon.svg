@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Profile Default icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="06-Support-option" transform="translate(-163.000000, -15.000000)" fill="#979FDF" fill-rule="nonzero">
+            <g id="Profile-Default-icon" transform="translate(163.000000, 15.000000)">
+                <path d="M20,0 C8.9721875,0 0,8.9721875 0,20 C0,31.0278125 8.9721875,40 20,40 C31.0278125,40 40,31.0278125 40,20 C40,8.9721875 31.0278125,0 20,0 Z M20,5.83335938 C25.2839844,5.83335938 29.5833594,10.1326563 29.5833594,15.4167188 C29.5833594,20.7007813 25.2839844,25 20,25 C14.7160156,25 10.4166406,20.7007031 10.4166406,15.4166406 C10.4166406,10.1325781 14.7160156,5.83335938 20,5.83335938 Z M20,36.6666406 C14.5541406,36.6666406 9.725,34.0295312 6.68179687,29.9779687 C10.0158594,28.37375 14.7771875,26.6666406 20,26.6666406 C25.2232031,26.6666406 29.9849219,28.3739844 33.3182812,29.9778125 C30.2750781,34.0294531 25.4459375,36.6666406 20,36.6666406 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

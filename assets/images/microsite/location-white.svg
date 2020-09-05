@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="21px" viewBox="0 0 16 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 8.720712e-05 15.6972816 8.720712e-05 15.6972816 20.9306681 0 20.9306681"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Microsite_Retailer" transform="translate(-147.000000, -1551.000000)">
+            <g id="Group-3" transform="translate(147.000000, 1551.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M7.8486408,11.3367512 C5.92223552,11.3367512 4.360356,9.77487167 4.360356,7.84846639 C4.360356,5.9220611 5.92223552,4.36018159 7.8486408,4.36018159 C9.77504608,4.36018159 11.3369256,5.9220611 11.3369256,7.84846639 C11.3369256,9.77487167 9.77504608,11.3367512 7.8486408,11.3367512 M7.8486408,-0.00017441424 C3.56066671,0.109706557 0.109880971,3.5604923 0,7.84846639 C0,14.3366761 5.69462494,19.185392 7.5608573,20.8248858 C7.72655083,20.9661614 7.97073077,20.9661614 8.1364243,20.8248858 C10.0026567,19.185392 15.6972816,14.3366761 15.6972816,7.84846639 C15.5874006,3.5604923 12.1366149,0.109706557 7.8486408,-0.00017441424" id="Fill-1" fill="#FFFFFF" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

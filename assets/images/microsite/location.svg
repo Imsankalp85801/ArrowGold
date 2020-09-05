@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="14px" viewBox="0 0 11 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 5.5902e-05 10.06236 5.5902e-05 10.06236 13.4170949 0 13.4170949"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Microsite_healthcare" transform="translate(-262.000000, -1298.000000)">
+            <g id="Group-3" transform="translate(262.000000, 1298.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M5.03118,7.2671482 C3.79630482,7.2671482 2.7951,6.26594338 2.7951,5.0310682 C2.7951,3.79619302 3.79630482,2.7949882 5.03118,2.7949882 C6.26605518,2.7949882 7.26726,3.79619302 7.26726,5.0310682 C7.26726,6.26594338 6.26605518,7.2671482 5.03118,7.2671482 M5.03118,-0.000111804 C2.28247866,0.070324716 0.07043652,2.28236686 0,5.0310682 C0,9.190177 3.6504006,12.2983282 4.8467034,13.3492858 C4.9529172,13.439847 5.1094428,13.439847 5.2156566,13.3492858 C6.4119594,12.2983282 10.06236,9.190177 10.06236,5.0310682 C9.99192348,2.28236686 7.77988134,0.070324716 5.03118,-0.000111804" id="Fill-1" fill="#3F3F3F" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

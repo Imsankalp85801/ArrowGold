@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <linearGradient id="linear-gradient" y1="1" x2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f79921"/>
+      <stop offset="1" stop-color="#ed3669"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_1" data-name="Group 1" transform="translate(-373 -216)">
+    <g id="Rectangle_Copy_6" data-name="Rectangle Copy 6" transform="translate(373 216)" stroke="#979797" stroke-miterlimit="10" stroke-width="1" fill="url(#linear-gradient)">
+      <rect width="20" height="20" rx="2" stroke="none"/>
+      <rect x="0.5" y="0.5" width="19" height="19" rx="1.5" fill="none"/>
+    </g>
+    <g id="noun_tick_1296922" transform="translate(378 222)">
+      <g id="Group">
+        <g id="Group-2" data-name="Group">
+          <path id="Path" d="M1.687,3.44A1,1,0,0,0,.313,4.894l3,2.833a1,1,0,0,0,1.476-.113l4.667-6A1,1,0,1,0,7.877.386L3.886,5.517Z" transform="translate(0.167 0)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

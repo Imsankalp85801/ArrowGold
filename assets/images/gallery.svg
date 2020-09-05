@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="41px" height="38px" viewBox="0 0 41 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>gallery</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UI-screen-(SP)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3.-Q-engage-menu-Copy" transform="translate(-48.000000, -284.000000)">
+            <g id="gallery" transform="translate(48.000000, 284.000000)">
+                <path d="M13.6307692,15.4567568 C13.4518903,15.4566332 13.2810663,15.3822615 13.1589744,15.2513514 C12.7692308,14.8713514 12.3794872,14.5221622 12,14.2243243 C10.7589744,13.1151351 9.68205128,12.1702703 9.68205128,10.6091892 C9.68769799,9.33697624 10.719235,8.30863608 11.9897436,8.30864865 C12.6093611,8.28376983 13.2088697,8.53140134 13.6307692,8.98648649 C14.044463,8.52584564 14.6436816,8.27677728 15.2615385,8.30864865 C16.5320471,8.30863608 17.5635841,9.33697624 17.5692308,10.6091892 C17.5692308,12.1497297 16.4923077,13.1151351 15.2512821,14.2243243 C14.8820513,14.5632432 14.4923077,14.9124324 14.1025641,15.2513514 C13.9784227,15.3793248 13.8089012,15.4531294 13.6307692,15.4567568 L13.6307692,15.4567568 Z" id="Path" fill="#F16C51" fill-rule="nonzero"></path>
+                <rect id="Rectangle" stroke="#2C357E" stroke-width="1.54499996" stroke-linecap="round" x="0.769230769" y="0.77027027" width="25.5794872" height="28.8491892" rx="2.05999994"></rect>
+                <polyline id="Path" stroke="#2C357E" stroke-width="1.54499996" stroke-linecap="round" stroke-linejoin="round" points="26.3487179 5.65891892 37.8461538 10.7632432 26.9435897 37.0551351 9.95897436 29.6194595"></polyline>
+                <polyline id="Path" stroke="#2C357E" stroke-width="1.54499996" stroke-linecap="round" stroke-linejoin="round" points="35.2717949 17.3567568 39.3435897 21.7935135 26.9435897 37.0551351"></polyline>
+                <polyline id="Path" stroke="#2C357E" stroke-width="1.54499996" stroke-linecap="round" stroke-linejoin="round" points="6.86153846 19.9551351 23.6 19.9551351 23.6 3.75891892 3.65128205 3.75891892 3.65128205 17.3567568"></polyline>
+                <ellipse id="Oval" fill="#2C357E" fill-rule="nonzero" cx="3.92820513" cy="19.9448649" rx="1" ry="1"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

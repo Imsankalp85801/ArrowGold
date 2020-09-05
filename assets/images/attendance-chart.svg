@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="138px" height="138px" viewBox="0 0 138 138" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>Group 8</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UI-screen" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="03.SP--Attendance-1.2" transform="translate(-26.000000, -472.000000)">
+            <g id="Group-8" transform="translate(42.000000, 478.000000)">
+                <g id="Group-35" transform="translate(0.000000, 10.000000)" stroke-width="31.9967985">
+                    <circle id="Oval" stroke="#FF82A4" cx="52.9946975" cy="52.9946975" r="52.9946975"></circle>
+                    <path d="M30.3472386,112.429359 C50.6017028,112.429359 68.2022459,101.066571 77.1220657,84.3677977" id="Oval-Copy-15" stroke="#ED3567" transform="translate(53.734652, 98.398578) rotate(30.000000) translate(-53.734652, -98.398578) "></path>
+                </g>
+                <text id="83%-copy" font-family="SourceSansPro-SemiBold, Source Sans Pro SemiBold" font-size="14" font-weight="500" line-spacing="20" fill="#FFFFFF">
+                    <tspan x="42" y="14">83%</tspan>
+                </text>
+                <text id="17%-copy" font-family="SourceSansPro-SemiBold, Source Sans Pro SemiBold" font-size="14" font-weight="500" line-spacing="20" fill="#FFFFFF">
+                    <tspan x="41" y="118">17%</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

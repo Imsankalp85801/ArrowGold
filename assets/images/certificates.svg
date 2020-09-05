@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="39px" viewBox="0 0 39 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>certificates</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UI-screen-(SP)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3.-Q-engage-menu-Copy" transform="translate(-161.000000, -284.000000)">
+            <g id="certificates" transform="translate(161.000000, 284.000000)">
+                <polygon id="Path" fill="#F16C51" fill-rule="nonzero" points="22.36 29.82 30.52 29.82 30.52 37.77 26.37 34.52 22.41 37.77"></polygon>
+                <polyline id="Path" stroke="#2C357E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" points="22.35 29.1 22.41 37.77 26.37 34.52 30.52 37.77 30.52 29.1"></polyline>
+                <circle id="Oval" fill="#F16C51" fill-rule="nonzero" cx="26.44" cy="24" r="3.35"></circle>
+                <rect id="Rectangle" fill="#F16C51" fill-rule="nonzero" x="11.31" y="9.98" width="15.82" height="2.78"></rect>
+                <path d="M33,31.16 L35.39,31.16 C36.4945695,31.16 37.39,30.2645695 37.39,29.16 L37.39,2.75 C37.39,1.6454305 36.4945695,0.75 35.39,0.75 L2.75,0.75 C1.6454305,0.75 0.75,1.6454305 0.75,2.75 L0.75,29.16 C0.75,30.2645695 1.6454305,31.16 2.75,31.16 L19.35,31.16" id="Path" stroke="#2C357E" stroke-width="1.5" stroke-linecap="round"></path>
+                <rect id="Rectangle" stroke="#2C357E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" x="10.97" y="9.73" width="16.45" height="3.33"></rect>
+                <path d="M9.35,19.75 L16.91,19.75" id="Path" stroke="#2C357E" stroke-width="1.5" stroke-linecap="round"></path>
+                <circle id="Oval" stroke="#2C357E" stroke-width="1.5" stroke-linecap="round" cx="26.37" cy="23.92" r="6.39"></circle>
+                <circle id="Oval" stroke="#2C357E" stroke-width="1.5" stroke-linecap="round" cx="26.37" cy="23.92" r="3.43"></circle>
+                <path d="M16.44,27.39 L8.76,27.39 C8.5731408,25.2364845 6.84643287,23.5394743 4.69,23.39 L4.69,9.06 C4.69,9.06 7.92,8.81 9.12,4.86 L29.72,4.86 C29.72,4.86 29.96,9.43 33.91,9.06 L33.91,16.12" id="Path" stroke="#2C357E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <rect id="Rectangle" fill="#F16C51" fill-rule="nonzero" x="9.6" y="16.55" width="1.37" height="1.37"></rect>
+                <rect id="Rectangle" fill="#F16C51" fill-rule="nonzero" x="12.34" y="16.55" width="1.37" height="1.37"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="8px" viewBox="0 0 14 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>Path Copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UI-screen" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01.-SP-fee-payments-with-filter-1" transform="translate(-308.000000, -408.000000)" fill="#2C357E" fill-rule="nonzero">
+            <g id="Group-2" transform="translate(35.000000, 402.000000)">
+                <path d="M283.712171,10.693072 L277.677699,16.7126627 C277.293833,17.0957791 276.671461,17.0957791 276.287783,16.7126627 C275.904072,16.3298871 275.904072,15.7090619 276.287783,15.3263173 L281.627359,9.9998993 L276.287938,4.67366719 C275.904228,4.29073669 275.904228,3.66997346 276.287938,3.28719788 C276.671648,2.90426737 277.293989,2.90426737 277.677854,3.28719788 L283.712326,9.30688153 C283.904181,9.49836228 284,9.74905333 284,9.99986832 C284,10.2508072 283.903995,10.5016842 283.712171,10.693072 Z" id="Path-Copy" transform="translate(280.000000, 10.000000) scale(-1, 1) rotate(-270.000000) translate(-280.000000, -10.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

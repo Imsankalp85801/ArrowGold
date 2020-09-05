@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="78px" height="50px" viewBox="0 0 78 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>raise a request</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UI-screen" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="06.-SP-Raise-a-request-1.5-(no-requests)" transform="translate(-133.000000, -244.000000)">
+            <g id="raise-a-request" transform="translate(134.500000, 245.000000)">
+                <path d="M29.2708537,0.494865694 L69.2173226,0.494865694 C70.7447097,0.489601807 72.2113384,1.09835407 73.2932215,2.1866796 C74.3751045,3.27500513 74.9831995,4.75334042 74.9831995,6.29511195 L74.9831995,29.3763678 C74.9723204,32.5829579 72.3940331,35.1765986 69.2173226,35.1765798 L42.4415382,35.1765798 L30.9097844,47.2553717 L30.9097844,35.1765798 L29.5078075,35.1765798 C26.3420025,35.1765986 23.7725558,32.5918817 23.7616768,29.3962998 L23.524587,6.33497595 C23.5142017,4.78976873 24.114948,3.30420033 25.193699,2.20781249 C26.27245,1.11142465 27.7400178,0.494865694 29.2708537,0.494865694 Z" id="Path" stroke="#2C357E" stroke-width="2.94450014" stroke-linecap="round" stroke-linejoin="round"></path>
+                <ellipse id="Oval" fill="#F16C51" fill-rule="nonzero" cx="42.4612843" cy="18.5532919" rx="2.66573075" ry="2.69081998"></ellipse>
+                <ellipse id="Oval" fill="#F16C51" fill-rule="nonzero" cx="49.4711689" cy="18.5532919" rx="2.66573075" ry="2.69081998"></ellipse>
+                <ellipse id="Oval" fill="#F16C51" fill-rule="nonzero" cx="56.2243535" cy="18.5532919" rx="2.66573075" ry="2.69081998"></ellipse>
+                <path d="M16.9295076,10.2416479 L0.480961529,10.2416479" id="Path" stroke="#2C357E" stroke-width="2.94450014" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M16.9295076,18.5732239 L3.7785692,18.5732239" id="Path" stroke="#2C357E" stroke-width="2.94450014" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M16.9295076,26.8450038 L8.71510763,26.8450038" id="Path" stroke="#2C357E" stroke-width="2.94450014" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

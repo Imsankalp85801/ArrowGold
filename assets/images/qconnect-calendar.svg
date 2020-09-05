@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="38px" viewBox="0 0 40 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>calendar (2)</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UI-screen" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3.-Q-engage-menu-Copy" transform="translate(-160.000000, -152.000000)">
+            <g id="calendar-(2)" transform="translate(160.000000, 152.000000)">
+                <path d="M4,3.27 L36.25,3.27 C37.9068542,3.27 39.25,4.61314575 39.25,6.27 L39.25,11.66 L1,11.66 L1,6.27 C1,4.61314575 2.34314575,3.27 4,3.27 Z" id="Path" fill="#F16C51" fill-rule="nonzero"></path>
+                <rect id="Rectangle" fill="#F16C51" fill-rule="nonzero" x="11.6" y="16.24" width="3.31" height="3.31"></rect>
+                <rect id="Rectangle" fill="#F16C51" fill-rule="nonzero" x="18.27" y="16.24" width="3.31" height="3.31"></rect>
+                <rect id="Rectangle" fill="#F16C51" fill-rule="nonzero" x="24.94" y="16.24" width="3.31" height="3.31"></rect>
+                <rect id="Rectangle" fill="#F16C51" fill-rule="nonzero" x="31.6" y="16.24" width="3.31" height="3.31"></rect>
+                <rect id="Rectangle" fill="#F16C51" fill-rule="nonzero" x="11.6" y="22.4" width="3.31" height="3.31"></rect>
+                <rect id="Rectangle" fill="#F16C51" fill-rule="nonzero" x="4.94" y="22.4" width="3.31" height="3.31"></rect>
+                <rect id="Rectangle" fill="#F16C51" fill-rule="nonzero" x="18.27" y="22.4" width="3.31" height="3.31"></rect>
+                <rect id="Rectangle" fill="#F16C51" fill-rule="nonzero" x="31.6" y="22.4" width="3.31" height="3.31"></rect>
+                <rect id="Rectangle" fill="#F16C51" fill-rule="nonzero" x="11.6" y="28.63" width="3.31" height="3.31"></rect>
+                <rect id="Rectangle" fill="#F16C51" fill-rule="nonzero" x="4.94" y="28.63" width="3.31" height="3.31"></rect>
+                <rect id="Rectangle" fill="#F16C51" fill-rule="nonzero" x="18.27" y="28.63" width="3.31" height="3.31"></rect>
+                <rect id="Rectangle" fill="#F16C51" fill-rule="nonzero" x="24.94" y="28.63" width="3.31" height="3.31"></rect>
+                <rect id="Rectangle" fill="#F16C51" fill-rule="nonzero" x="31.6" y="28.63" width="3.31" height="3.31"></rect>
+                <rect id="Rectangle" stroke="#2C357E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" x="0.75" y="3.27" width="38.5" height="33.33" rx="3"></rect>
+                <path d="M13.34,0.82 L13.34,7.4" id="Path" stroke="#2C357E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M26.68,0.75 L26.68,7.4" id="Path" stroke="#2C357E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M1.68,12.17 L39.25,12.17" id="Path" stroke="#2C357E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <polyline id="Path" stroke="#F16C51" stroke-linecap="round" stroke-linejoin="round" points="24.94 24.07 26.4 25.34 28.25 22.77"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
