@@ -3,8 +3,9 @@ import * as actions from '../../utils/Actions';
 
 const initialState = {
     showLoader: false,
-    loginDetails: [],
-    status: false
+    userDetails: null,
+    loginStatus: false,
+    loggedOut:false
 };
 
 export default function loginReducer(state = initialState, action) {
@@ -15,6 +16,14 @@ export default function loginReducer(state = initialState, action) {
 
     switch (action.type) {
 
+
+        case actions.LOGOUT:
+            return {
+                ...state,           
+                loginStatus: false,
+                loggedOut: true,
+                userDetails: null,
+            }
     
         case actions.pending(actions.LOGIN):
             
@@ -24,13 +33,11 @@ export default function loginReducer(state = initialState, action) {
             }
 
         case actions.fulfilled(actions.LOGIN):
-           
-                  
             return {
                 ...state,
                 showLoader: false,
-                status:  action.payload.data.success,
-                loginDetails: action.payload.data
+                loginStatus:  action.payload.data.status,
+                userDetails: action.payload.data
                 
             }
 
@@ -38,6 +45,7 @@ export default function loginReducer(state = initialState, action) {
             return {
                 ...state,
                 showLoader: false,
+                loginStatus:false
             }
 
         default:

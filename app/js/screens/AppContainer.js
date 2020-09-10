@@ -1,7 +1,7 @@
 import React, { useEffect, useState, Fragment } from 'react';
 import {NavigationContainer, StackActions} from '@react-navigation/native'
 import {createStackNavigator} from '@react-navigation/stack'
-// import { getSession } from '../services/Session';
+import { getSession } from '../services/Session';
 import {notUndefinedAndNull, empty} from '../utils/Validation';
 import AuthHome from './user/AuthHome';
 import NavigationDrawer from './NavigationDrawer';
@@ -28,17 +28,17 @@ let Drawer = createDrawerNavigator()
 
 export default function AppContainer(props){
 
-    // let session = useSession();
+    let session = useSession();
     let store = useSelector(connectToStore, shallowEqual);
     let [connection, setConnection] = useState(false);
 
 
-     // The effect will be executed when a user is logged out
-    //  useEffect(()=>{
-    //     if(store.loggedOut){
-    //         session.setIsLoggedIn(false);
-    //     }
-    //   },[store.loggedOut])
+    // The effect will be executed when a user is logged out
+     useEffect(()=>{
+        if(store.loggedOut){
+            session.setIsLoggedIn(false);
+        }
+      },[store.loggedOut])
 
     //   useEffect(()=>{
     //     NetInfo.addEventListener(handleConnectivityChange);
@@ -60,7 +60,7 @@ export default function AppContainer(props){
             {/* <ToastMessage show={store.error && store.showToast} message={store.errorMessage}/> */}
             {!connection ? 
             <NavigationContainer>
-                {connection ?
+                {!session.isLoggedIn ?
                     <Stack.Navigator headerMode="none">
                         <Stack.Screen name="AuthHome" component={AuthHome}/>
                     </Stack.Navigator>
@@ -90,12 +90,11 @@ export default function AppContainer(props){
 function useSession(){
     let store = useSelector(connectToStore, shallowEqual);
     let [isLoggedIn, setIsLoggedIn] = useState(false);
-    let [userObject, setUserObject] = useState(null);
 
 
     useEffect(()=>{
         setSession();
-    }, [store.isLoggedIn, store.user])
+    }, [store.loginStatus])
             // The effect will be executed when a user is logged out
 
     useEffect(()=>{
@@ -106,7 +105,6 @@ function useSession(){
         try{
             let session = await getSession()
             if(notUndefinedAndNull(session)){
-                setUserObject(session.authentication.roles[0])
                 setIsLoggedIn(true)
             }
         }catch(e){
@@ -116,16 +114,15 @@ function useSession(){
 
     return {
         isLoggedIn,
-        userObject,
         setIsLoggedIn: (isLoggedIn) => setIsLoggedIn(isLoggedIn)
     }
 }
 
 function connectToStore(store){
     return{
-        // isLoggedIn: store.user.isLoggedIn,
-        // user: store.user.user,
-        // loggedOut:store.user.loggedOut,
+        userDetails:store.login.userDetails,
+        loginStatus:store.login.loginStatus,
+        loggedOut:store.login.loggedOut
         // showToast: store.global.showToast,
         // error: store.global.error,
         // errorMessage: store.global.message,

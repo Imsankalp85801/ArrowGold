@@ -22,12 +22,10 @@ export default function HeaderDesign(props){
             <Fragment>
                 <View style={headerStyles.container}>
                     <View style={headerStyles.textStyle}>
-                        <QText style={headerStyles.text}>Welcome to ArrowGold</QText>
+                        <QText style={headerStyles.text}>{props.label}</QText>
                     </View>
                     <View style={headerStyles.rightSide}>
-                        <TouchableOpacity
-                            background={TouchableNativeFeedback.Ripple('#F79923')}
-                            onPress={()=>openDrawer()}>
+                        <TouchableOpacity onPress={()=>openDrawer()}>
                              <UserIcon height={30} width={30} fill='#D4AF37' style={ {marginRight: 10 }} /> 
                         </TouchableOpacity>
                     </View>

@@ -11,6 +11,8 @@ import Loader from '../../components/Loader';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import { notUndefinedAndNull, empty, undefinedOrNull } from '../../utils/Validation';
 import { usernameValidation, passwordValidation } from '../../utils/ValidationSchema';
+import * as loginAction from  '../../redux/action/LoginAction';
+import { createSession } from '../../services/Session';
 
 import { Avatar, Divider, Icon, Overlay,Input } from 'react-native-elements';
 
@@ -24,56 +26,19 @@ export default function Login(){
 
     let userNameInput = useInput('Username', 'none', 'default', usernameValidation());
     let passwordInput = useInput('Password', 'password', 'default', passwordValidation());
-    // let login = useLogin();
-    // let [showRolePopup, setShowRolePopup] = useState(false);
-    // let [selectedRole, setSelectedRole] = useState(null);
+    let login = useLogin();
     let [showPassword, setShowPassword] = useState(true);
 
 
-    // useEffect(()=>{
-    //     if(store.userNameChecked){
-    //         dispatch(userAction.resetUsernameCheck())
-    //     }
-    // }, [userNameInput.value]);
+    useEffect(()=>{
+        if(store.loginStatus){
+            let {userDetails} =store;
+            if(userDetails){
+                createSession(userDetails.token);   
+            }
+        }
+    },[store.loginStatus]);
 
-    // useEffect(()=>{
-    //     if(store.isLoggedIn){
-    //         let {user} =store;
-    //         let roles = user.authentication.roles
-    //         if(roles.length > 1){
-    //             setShowRolePopup(true)
-    //         }else{
-    //             createUserSession(store.user);   
-    //         }
-    //     }
-    // },[store.isLoggedIn]);
-
-    // useEffect(()=>{
-    //     let user = store.user;
-    //     if(notUndefinedAndNull(user)){
-    //         user.authentication.roles=[selectedRole]
-    //         createUserSession(user);
-    //         dispatch(userAction.setUserActiveRole(selectedRole))
-    //         dispatch(userAction.setUserData(user))
-    //     }
-    // },[selectedRole])
-
-    // useEffect(()=>{
-    //   if(store.isOTPLogin){
-    //     if(!empty(userNameInput.value)){
-    //         dispatch(userAction.sentOTP(userNameInput.value))
-    //         navigation.navigate('OTP Login',{userName: userNameInput.value});
-    //     }
-    //   }
-    // },[store.isOTPLogin]);
-
-    // function createUserSession(user){
-    //     try{
-    //         createSession(user);
-    //     }catch(e){
-    //         //TODO: Add Firebase reporting tool here
-    //     }
-    // }
 
     function onPressButton(){
         
@@ -84,56 +49,27 @@ export default function Login(){
         }
     }
 
-    // function isFormValid(){
+    function isFormValid(){
 
-    //     let isValid = true;
+        let isValid = true;
 
-    //     if(empty(userNameInput.value)){
-    //         isValid = false;
-    //         userNameInput.validate(userNameInput.value)
-    //     }
-
-    //     if(isValid && store.userNameChecked){
-    //         if(!store.isOTPLogin && empty(passwordInput.value)){
-    //             passwordInput.validate(userNameInput.value)
-    //         }
-    //     }
-
-    //     return isValid;
-    // }
-
-
-    function gotoForgotPassword(){
-        userNameInput.validate();
-        if(!empty(userNameInput.value)){
-            navigation.navigate('Forgot Password',{userName: userNameInput.value});
+        if(empty(userNameInput.value)){
+            isValid = false;
+            userNameInput.validate(userNameInput.value)
         }
+
+        if(isValid && store.userNameChecked){
+            if(!store.isOTPLogin && empty(passwordInput.value)){
+                passwordInput.validate(userNameInput.value)
+            }
+        }
+
+        return isValid;
     }
 
-    function gotoForgotUsername(){    
-            navigation.navigate('Forgot Username');
-    }
-
-    // function goToPayDirect(){
-    //     navigation.navigate('Paydirect');
-    // }
-
-    // function renderRolePopupBody(){
-    //     let {user} =store;
-    //     if(undefinedOrNull(user)){
-    //         return null
-    //     }
-    //     let roles = user.authentication.roles
-
-    //     return(
-    //         <RoleSelect items={roles}  show={(v)=>setShowRolePopup(v)} onSelectRole={setSelectedRole}
-    //         />
-    //     )
-    // }
 
     return(
-        
-            <KeyboardAwareScrollView
+        <KeyboardAwareScrollView
                 enableOnAndroid
                 enableAutomaticScroll
                 keyboardOpeningTime={0}
@@ -162,13 +98,11 @@ export default function Login(){
                              hasIcon={true} inputContainerStyle={styles.inputContainer}
                              inputTextStyle={styles.input}
                              iconPosition='right' rightIcon={
-                            <Icon name='eye' type='evilicon' size={25} color={'#fff'} 
-                                onPress={()=>setShowPassword(!showPassword)}  />
-                            }
+                                <Icon name='eye' type='evilicon' size={25} color={'#fff'} 
+                                    onPress={()=>setShowPassword(!showPassword)}  />
+                                }
                             />
-                            
                         </View>
-                       
                         <View>
                             <QButton
                                 title='Login'
@@ -183,9 +117,6 @@ export default function Login(){
             }
             </>
             </KeyboardAwareScrollView>
-           
-        
-
     )
 }
 
@@ -228,18 +159,12 @@ function useLogin(){
     let store = useSelector(connectToStore, shallowEqual);
 
     function handleOnPress(username, password){
-        if(!store.userNameChecked){
-            dispatch(userAction.isOTBasedLogin(username))
-        }
+        if(username && password){
 
-        if(store.userNameChecked && !store.isOTPLogin){
-
-            let credentials = {
-                login: username,
-                password: password
-              }
-
-            dispatch(userAction.passwordLogin(credentials))
+            let body = new FormData()         
+            body.append("email", username)
+            body.append("password", password);
+            dispatch(loginAction.login(body))
         }
     }
 
@@ -250,11 +175,9 @@ function useLogin(){
 
 function connectToStore(store){
     return{
-        // userNameChecked: store.user.userNameChecked,
-        // isOTPLogin: store.user.isOTPLogin,
-        // showLoader: store.user.showLoader,
-        // isLoggedIn: store.user.isLoggedIn,
-        // user: store.user.user
+        showLoader:store.login.showLoader,
+        userDetails:store.login.userDetails,
+        loginStatus:store.login.loginStatus
     }
 }
 
@@ -287,13 +210,12 @@ const styles = StyleSheet.create({
         marginTop: 50,
         marginBottom: 20
     },
-    forgotUsername: {
+    forgotUsername:{
         marginRight: 20
     },
-    input: {
-        color: '#fff',
+    input:{
+        color: '#ffff',
         borderBottomWidth: 0
-
     },
     loginToContinue:{
         color: '#ffff',

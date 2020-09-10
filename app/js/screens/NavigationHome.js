@@ -3,18 +3,14 @@ import { View, Text,Fragment,StatusBar } from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack'
 
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
-
-// import { isMenuConfigured } from '../utils/utils';
 import { notUndefinedAndNull } from "../utils/Validation";
 import {getHeaderTitle} from '../components/HeaderRoute';
-
 import HeaderDesign from '../components/HeaderDesign';
 
-//Dashboard
 
 import AppHome from './AppHome';
-
-
+import Logout from './user/Logout';
+import CategoryDetails from './dashboard/CategoryDetails';
 
 
 
@@ -38,19 +34,16 @@ export default function NavigationHome(props){
     }
     
 
-    function renderTeacherNavigationRoute(name,component,title){
-          return <Stack.Screen name={name} component={component} options={{headerTitle:title}}/> 
-    }
 
 
     return (
         <Stack.Navigator >
-            <Stack.Screen name="AppHome" component={AppHome} 
-            // options={{headerTitle: props => <HeaderDesign {...props} />}}  
-             options={({ route }) => ({
+            <Stack.Screen name="AppHome" component={AppHome}  options={({ route }) => ({
                 headerTitle:props=>getHeaderTitle(route)
-              })}
-            />
+              })}/>
+            {renderDasboardRoute("Logout",Logout,false,null)}
+            {renderDasboardRoute("CategoryDetails",CategoryDetails,true,'Category Details')}
+
         </Stack.Navigator> 
     )
 }

@@ -42,7 +42,7 @@ export default function NavigationDrawer(props){
 
     function renderCustomDrawerItem(iconName,label,routeName){
         return(
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>props.navigation.navigate(routeName)}>   
                 <View style={styles.containDrawerOption}>
                     {renderIcons(iconName)}
                     <QText style={styles.drawerLabel}>{label}</QText>
@@ -70,16 +70,6 @@ export default function NavigationDrawer(props){
           }
     }
 
-    function renderCustomDrawerItem(iconName,label,routeName){
-      return(
-          <TouchableOpacity>
-              <View style={styles.containDrawerOption}>
-                  {renderIcons(iconName)}
-                  <QText style={styles.drawerLabel}>{label}</QText>
-              </View>
-          </TouchableOpacity>
-      )
-  }
 
     return (
       <Fragment>

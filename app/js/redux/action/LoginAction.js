@@ -1,16 +1,25 @@
-import * as action from "../../utils/Constant";
+import * as action from "../../utils/Actions";
 import { request } from "../../services/Request";
+import * as url from "../../utils/Url";
 
-
-export function login(limit) {
-  
-  return (dispatch) =>
+export function login(data) {
+  return async (dispatch)=>{
+    let http = await request(url.URL);
     dispatch({
       type: action.LOGIN,
-      payload: request("https://standalonetest.eduqfix.com").get("/index.php/rest/V1/marketplace/getSellerDetails",{
-        params :{
-          "limit":limit
-        }
-  })
+      payload: http.post("/login",data,{
+        headers: {
+            'Content-Type': 'multipart/form-data',
+            }
+        })
     }).catch(response => {});
+  }
+}
+
+
+export function logout(){
+  return (dispatch) =>
+    dispatch({
+      type: action.LOGOUT
+    })
 }

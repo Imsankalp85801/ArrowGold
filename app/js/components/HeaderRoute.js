@@ -1,8 +1,6 @@
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import React, { useEffect, useState, Fragment,useRef } from 'react';
-
 import HeaderDesign from './HeaderDesign';
-import { View,Text } from 'react-native';
 
 
 export function getHeaderTitle(route){
@@ -10,25 +8,22 @@ export function getHeaderTitle(route){
 
 
     switch (routeName) {
-      case 'Home':
-           return home()
-      case 'Catalog':
-        return catalog()
+        case 'Home':
+            return header("Welcome to ArrowGold")
+        case 'Catalog':
+            return header(routeName)
         case 'Search':
-            return sankalp()
-        }
-
-
-    function home(){
-        return(
-            <HeaderDesign />
-        ) 
-        
+            return header(routeName)
+        case 'My Order':
+            return header(routeName)
+        case 'Cart':
+            return header(routeName)
     }
 
-    function catalog(){
+
+    function header(labelName){
         return(
-            <Text>Catalog</Text>
+            <HeaderDesign label={labelName} />
         ) 
         
     }

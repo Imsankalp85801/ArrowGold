@@ -23,7 +23,9 @@ export default function configureStore(initialState) {
     ? createStore(
         reducer,
         initialState,
-        composeEnhancers(applyMiddleware(promise, thunkMiddleware, logger, customMiddleWare))
+        // composeEnhancers(applyMiddleware(promise, thunkMiddleware, logger, customMiddleWare))
+        composeEnhancers(applyMiddleware(promise, thunkMiddleware, customMiddleWare))
+
       )
     : createStore(
         reducer,

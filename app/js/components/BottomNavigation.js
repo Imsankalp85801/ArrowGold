@@ -1,19 +1,12 @@
 
 import React, { useEffect, useState, Fragment,useRef } from 'react';
 import { StyleSheet, View,TouchableOpacity,Image, Dimensions} from "react-native";
-
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Avatar, Divider, Icon, Overlay, getIconType } from 'react-native-elements';
 
 import Dashboard from '../screens/dashboard/Dashboard';
 import Catalog from '../screens/catalog/Catalog';
-
-// import QEngage from '../screens/QEngage';
-// import QConnect from '../screens/QConnect';
-
-import DashboardIcon from "../../../assets/images/dashboard.svg";
-import Engage from "../../../assets/images/engage.svg";
-import Connect from "../../../assets/images/connect.svg";
+import Search from '../screens/search/Search';
 
 
 import Colors from '../constants/Colors';
@@ -23,72 +16,44 @@ const Tab = createBottomTabNavigator();
 
 export default function BottomNavigation(props){
 
-    // function renderTabs(label,componentName,iconName,show){
+    function renderTabs(label,componentName,iconName,show,type){
 
-    //     if(show){
-    //         return(
-    //             <Tab.Screen  name={label} component={componentName} options={{
-    //                 tabBarIcon: ({ color, size }) => (
-    //                        renderIcons(iconName,color)
-    //                 )}}
-    //             />
-    //         )
-    //     }
-    // }
+        if(show){
+            return(
+                <Tab.Screen  name={label} component={componentName} options={{
+                    tabBarIcon: ({ color, size }) => (
+                           renderIcons(iconName,type,color)
+                    )}}
+                />
+            )
+        }
+    }
 
-    function renderIcons(icon,color){
-        switch (icon) {
-            case "engage":
-              return <Engage height={15} width={15} fill={color}/>
-            case "connect":
-              return <Connect height={15} width={15} fill={color}/>
-            default:
-                return ;
-            }
+    function renderIcons(name,type,color){
+        return(
+            <Icon name={name} type={type} size={22} color={color}  />
+        )
       }
 
     return(
         <Tab.Navigator initialRouteName="Dashboard" tabBarOptions={{
-                inactiveTintColor:'#696969',
-                activeTintColor:'#ED3567',
-                labelStyle: {
-                    fontSize: 15
-                }, 
-                activeBackgroundColor: 'white', 
-                inactiveBackgroundColor : '#000000'}}
-                >
+            inactiveTintColor:'white',
+            activeTintColor:'#000000',
+            labelStyle: {
+                fontSize: 15
+            }, 
+            activeBackgroundColor: '#D4AF37', 
+            inactiveBackgroundColor : '#000000'}}
+            >
             <Tab.Screen  name="Home" component={Dashboard} options={{
-                tabBarIcon: ({ color, size }) => (
-                    <MaterialCommunityIcons name="settings" color={color} size={size} />
-                  ),
-                }} 
+                    tabBarIcon: ({ color, size }) => (
+                        renderIcons('home','antdesign',color)
+                 )}}
             />
-            <Tab.Screen  name="Catalog" component={Catalog} options={{
-                tabBarIcon: ({ color, size }) => (
-                    <MaterialCommunityIcons name="settings" color={color} size={size} />
-                  ),
-                }} 
-            /><Tab.Screen  name="Search" component={Dashboard}
-
-               options={{
-                tabBarIcon: ({ color, size }) => (
-                    <MaterialCommunityIcons name="settings" color={color} size={size} />
-                  ),
-            }} 
-            />
-            <Tab.Screen  name="My Order" component={Dashboard} options={{
-                tabBarIcon: ({ color, size }) => (
-                    <MaterialCommunityIcons name="settings" color={color} size={size} />
-                  ),
-                }} 
-            />
-             <Tab.Screen  name="My Cart" component={Dashboard} options={{
-                tabBarIcon: ({ color, size }) => (
-                    <MaterialCommunityIcons name="settings" color={color} size={size} />
-                  ),
-                }} 
-            />
-         
+            {renderTabs('Catalog',Catalog,"search1",true,'antdesign')}
+            {renderTabs('Search',Search,"search1",true,'antdesign')}
+            {renderTabs('My Order',Catalog,"search1",true,'antdesign')}
+            {renderTabs('Cart',Dashboard,"shoppingcart",true,'antdesign')}
         </Tab.Navigator>
     )
 }
