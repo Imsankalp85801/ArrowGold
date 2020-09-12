@@ -17,6 +17,7 @@ import IdCardIcon from "../../../assets/images/id_card.svg";
 import ChangePasswordIcon  from "../../../assets/images/password_change.svg";
 import SupportIcon from "../../../assets/images/payment_details.svg";
 import LogoutIcon from "../../../assets/images/logout.svg";
+import { func } from 'prop-types';
 let Drawers = createDrawerNavigator()
 // let studentDefaultAvatar=Image.resolveAssetSource(studentAvatar).uri;
 
@@ -26,6 +27,12 @@ export default function NavigationDrawer(props){
   let isDrawerOpen=useIsDrawerOpen();
   let store = useSelector(connectToStore, shallowEqual);
 
+
+  function renderName(){
+    if(notUndefinedAndNull(store.userDetails) && notUndefinedAndNull(store.userDetails.user)){
+      return store.userDetails.user.name
+    }
+  }
   
   function renderDrawerView(){
     return(
@@ -33,7 +40,7 @@ export default function NavigationDrawer(props){
           <StatusBar backgroundColor={(useIsDrawerOpen()) ? '#000000' : '#182064'} barStyle="default" translucent animated />
                 <View style={styles.containHeader}>
                     <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                      <QText style={styles.name}>Sankalp Saxena</QText>
+                      <QText style={styles.name}>{renderName()}</QText>
                     </View>
                 </View>
         </SafeAreaView>
@@ -85,7 +92,7 @@ export default function NavigationDrawer(props){
 
 function connectToStore(store){
   return {
-      // studentsList: store.parent.studentsList,
+      userDetails: store.login.userDetails,
       // parentDetails:store.parent.parentDetails,
       // studentDetails: store.student.studentDetails,
       // teacher: store.teacher.teacherDetails,
