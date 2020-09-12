@@ -18,8 +18,8 @@ const styles = StyleSheet.create({
       productInnerWrap: {
         width:140,
         backgroundColor: "rgba(255,255,255,1)",
-        borderRadius: 20,
-        borderColor: "rgba(196,196,196,1)",
+        borderRadius: 30,
+        borderColor: '#D4AF37',
         borderWidth: 1,
         padding: 10,
         marginLeft:20,
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         alignContent:"center",
         alignItems:"center",
         marginTop:10,
-        padding: 5
+        
       }
      
 })

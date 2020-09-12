@@ -6,6 +6,7 @@ import _ from 'lodash';
 import * as homeAction from  '../../redux/action/HomeAction';
 import { notUndefinedAndNull, empty, undefinedOrNull,undefinedOrZero } from "../../utils/Validation"
 import Loader from '../../components/Loader'; 
+import QText from '../../components/QText'; 
 
 
 var devicewidth = Dimensions.get("window").width; //full width
@@ -116,14 +117,19 @@ const styles = StyleSheet.create({
       justifyContent: "center",
       alignContent:"center",
       alignItems:"center",
-      marginTop:10,
+      marginTop:5,
+
+    
     },
     productImage: {
-      width: 250,
+      width: 300,
       height: 150,
       backgroundColor: "transparent",
       opacity: 1,
       marginTop: 14,
+      
+      
+
 
     },
     noDataView:{
