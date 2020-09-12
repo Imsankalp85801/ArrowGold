@@ -11,6 +11,10 @@ import HeaderDesign from '../components/HeaderDesign';
 import AppHome from './AppHome';
 import Logout from './user/Logout';
 import CategoryDetails from './dashboard/CategoryDetails';
+import ProductListing from './dashboard/ProductListing';
+import ProductDetails from './dashboard/ProductDetails';
+
+
 
 
 
@@ -43,6 +47,9 @@ export default function NavigationHome(props){
               })}/>
             {renderDasboardRoute("Logout",Logout,false,null)}
             {renderDasboardRoute("CategoryDetails",CategoryDetails,true,'Category Details')}
+            {renderDasboardRoute("ProductListing",ProductListing,true,'Product Listing')}
+            {renderDasboardRoute("ProductDetails",ProductDetails,true,'Product Details')}
+
 
         </Stack.Navigator> 
     )

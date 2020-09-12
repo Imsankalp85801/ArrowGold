@@ -37,6 +37,6 @@ export async function clearSession(){
 export async function getToken(){
     let session = await getSession();
       if (!empty(session)) {
-          return session.token;
+          return session;
       }
   }

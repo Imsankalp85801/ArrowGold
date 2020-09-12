@@ -5,7 +5,10 @@ import { notUndefinedAndNull, undefinedOrZero } from '../../utils/Validation';
 const initialState = {
     showLoader: false,
     menuDetails:null,
-    categoryDetails:null
+    categoryDetails:null,
+    productListing:null,
+    productDetails:null,
+    addToCart:null
 };
 
 export default function HomeReducer(state = initialState, action) {
@@ -15,7 +18,16 @@ export default function HomeReducer(state = initialState, action) {
     }
 
     switch (action.type) {
-    
+        
+        case actions.RESET_HOME_DATA:
+            return {
+                ...state,
+                menuDetails:null,
+                categoryDetails:null,
+                productListing:null,
+                productDetails:null,
+                addToCart:null
+            }
         case actions.pending(actions.MENU):
             
             return {
@@ -63,7 +75,77 @@ export default function HomeReducer(state = initialState, action) {
                 showLoader: false,
             }
             
+        case actions.pending(actions.GET_PRODUCT_LISTING):
+        
+            return {
+                ...state,
+                showLoader: true
+            }
 
+        case actions.fulfilled(actions.GET_PRODUCT_LISTING):
+            let pData=action.payload.data.data
+            let productListingData=notUndefinedAndNull(pData.result) && 
+            !undefinedOrZero(pData.result.product) ?pData: null
+            return {
+                ...state,
+                showLoader: false,
+                productListing: productListingData
+                
+            }
+
+        case actions.rejected(actions.GET_PRODUCT_LISTING):
+            return {
+                ...state,
+                showLoader: false,
+            }
+
+        case actions.pending(actions.GET_PRODUCT_DETAILS):
+            return {
+                ...state,
+                showLoader: true,
+                productDetails:null
+            }
+
+        case actions.fulfilled(actions.GET_PRODUCT_DETAILS):
+            let detailData=action.payload.data.data
+            let productDetailsData=notUndefinedAndNull(detailData) && 
+            notUndefinedAndNull(detailData.product) ? detailData: null
+            return {
+                ...state,
+                showLoader: false,
+                productDetails: productDetailsData
+                
+            }
+
+        case actions.rejected(actions.GET_PRODUCT_DETAILS):
+
+            return {
+                ...state,
+                showLoader: false,
+            }
+        
+
+        case actions.pending(actions.ADD_TO_CART):
+            return {
+                ...state,
+                showLoader: true,
+            }
+
+        case actions.fulfilled(actions.ADD_TO_CART):
+            return {
+                ...state,
+                showLoader: false,
+                addToCart:action.payload.data
+                
+            }
+
+        case actions.rejected(actions.ADD_TO_CART):
+
+            return {
+                ...state,
+                showLoader: false,
+            }
+        
         default:
             return {...state}
     }

@@ -10,29 +10,19 @@ export let LOGOUT = "LOGOUT";
 //Home Action
 export let MENU = "MENU"; 
 export let GET_CATEGORY_BY_ID = "GET_CATEGORY_BY_ID"; 
+export let GET_PRODUCT_LISTING = "GET_PRODUCT_LISTING"; 
+export let GET_PRODUCT_DETAILS = "GET_PRODUCT_DETAILS"; 
+export let ADD_TO_CART = "ADD_TO_CART";
+export let RESET_HOME_DATA = "RESET_HOME_DATA";
 
 
 
 
-
-//shopping categories
-export let GET_CATEGORIES = "GET_CATEGORIES";
-export let CATEGORIES_SET = "CATEGORIES_SET";
-export let RESET_CATEGORIES = "RESET_CATEGORIES";
-export let GET_SUBCATEGORIES = "GET_SUBCATEGORIES";
-
-//shopping product details
-export let GET_PRODUCT_DETAILS = "GET_PRODUCT_DETAILS";
-export let RESET_PRODUCT_DETAILS = "RESET_PRODUCT_DETAILS";
-export let PRODUCT_REVIEWS = "PRODUCT_REVIEWS";
-export let DEMO_REQUEST = "DEMO_REQUEST";
-export let ADD_WISHLIST = "ADD_WISHLIST";
 
 
 // Cart actions
 export let GET_CART_ITEMS = "GET_CART_ITEMS";
 export let GET_CARTID = "GET_CARTID";
-export let ADD_TO_CART = "ADD_TO_CART";
 export let REMOVE_ITEM = "REMOVE_ITEM";
 export let DECREASE_QUANTITY = "DECREASE_QUANTITY";
 export let RESET_CART_DATA = "RESET_CART_DATA";

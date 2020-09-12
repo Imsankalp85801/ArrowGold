@@ -8,37 +8,34 @@ import { notUndefinedAndNull, empty, undefinedOrNull,undefinedOrZero } from "../
 import Loader from '../../components/Loader'; 
 import QText from '../../components/QText'; 
 import ProductItem from '../../components/ProductItem';
-import { func } from 'prop-types';
-
 
 
 var devicewidth = Dimensions.get("window").width; //full width
 var height = Dimensions.get("window").height; //full height
 
-export default function CategoryDetails(props) {
+export default function ProductListing(props) {
 
   let dispatch = useDispatch();
   let store = useSelector(connectToStore, shallowEqual);
   let navigation = useNavigation();
   
+
   useEffect(()=>{
     const unsubscribe = navigation.addListener('focus', () => {
       let item = props.route.params.item;
       if(notUndefinedAndNull(item)){
-          dispatch(homeAction.getCategorybyId(item.cat_id)) 
+          dispatch(homeAction.getProductListing(item.cat_id)) 
       }
     });
 
     return unsubscribe;
 }, [navigation])
 
-
-
-  function getMenuImagePath(path){
-    let {categoryDetails} =store
-    let pathValue = categoryDetails.image_path
+  function getImagePath(path,id){
+    let {productListing} =store
+    let pathValue = productListing.image_path
     if(!empty(path)){
-        pathValue = pathValue+path;
+        pathValue = pathValue+id+"/"+path;
     }
     return pathValue;
   }
@@ -47,9 +44,9 @@ export default function CategoryDetails(props) {
   function renderItem({ item }){
     return(
       <Fragment>
-          <TouchableOpacity onPress={() =>navigation.navigate('ProductListing',{item:item})}>
+          <TouchableOpacity onPress={() =>navigation.navigate('ProductDetails',{item:item})}>
             <ProductItem>
-                <Image source={{ uri : getMenuImagePath(item.cat_image)}} style={styles.productImage} resizeMode="contain" ></Image>
+                <Image source={{ uri : getImagePath(item.pr_default_image,item.pr_id)}} style={styles.productImage} resizeMode="contain" ></Image>
                 <QText
                       fontWeight='regular'
                       fontSize='medium'
@@ -57,9 +54,9 @@ export default function CategoryDetails(props) {
                       numberOfLines={1} 
                       ellipsizeMode="tail"
                       >
-                      {item.cat_name.length < 15
-                          ? `${item.cat_name}`
-                          : `${item.cat_name.substring(0, 15)}...`}
+                      {item.pr_name.length < 15
+                          ? `${item.pr_name}`
+                          : `${item.pr_name.substring(0, 15)}...`}
                   </QText>
             </ProductItem>
           </TouchableOpacity>
@@ -67,12 +64,12 @@ export default function CategoryDetails(props) {
     )
   }
 
-  function renderImageList(categoryList){
+  function renderImageList(productListing){
 
     return(
       <FlatList
-          data={categoryList.result}
-          keyExtractor={result => result.cat_id}
+          data={productListing.product}
+          keyExtractor={result => result.pr_id}
           numColumns={2}
           columnWrapperStyle={styles.container}
           renderItem={renderItem}
@@ -82,26 +79,26 @@ export default function CategoryDetails(props) {
 
   }
 
-  function renderCategory(){
-    let {categoryDetails} =store
+  function renderProduct(){
+    let {productListing} =store
     return(
         <View style={styles.maincontainer}>
-          {renderImageList(categoryDetails)}
+          {renderImageList(productListing.result)}
         </View>
     )
   }
 
-  function renderNoCategory(){
+  function renderNoProduct(){
     if (!store.showLoader) {
   
-        if(notUndefinedAndNull(store.categoryDetails)) {
+        if(notUndefinedAndNull(store.productListing)) {
           return null;
         }
 
         return(
            <View style={styles.noDataView}>
             <QText fontWeight='regular' fontSize='large' style={styles.text}>
-                No Category found!
+                No Product found!
                </QText>
            </View> 
         )
@@ -111,8 +108,8 @@ export default function CategoryDetails(props) {
     return (
       <Fragment>
         <Loader show={store.showLoader}/>
-          {notUndefinedAndNull(store.categoryDetails) && renderCategory()}  
-          {renderNoCategory()} 
+          {notUndefinedAndNull(store.productListing) && renderProduct()}  
+          {renderNoProduct()} 
       </Fragment>
     );
   }
@@ -120,36 +117,36 @@ export default function CategoryDetails(props) {
   function connectToStore(store){
     return{
         showLoader:store.home.showLoader,
-        categoryDetails:store.home.categoryDetails
+        productListing:store.home.productListing
     }
 }
 
 
 const styles = StyleSheet.create({
-  maincontainer:{
-    flex:1,
-  },
-  container: {
-    justifyContent: "center",
-    marginTop: 5,
-    marginBottom:5
-  },
-  flatlistPadding:{
-    paddingBottom: 60,
-  },
-  productImage: {
-    width: 120,
-    height: 120,
-    backgroundColor: "transparent",
-    opacity: 1,
-    marginTop: 14
-  },
-  text:{
-    alignSelf:"center",
-    marginTop:5
-  },
-  noDataView:{
-    justifyContent:"center",
-    flex:1
-  },
-});
+    maincontainer:{
+      flex:1,
+    },
+    container: {
+      justifyContent: "center",
+      marginTop: 5,
+      marginBottom:5
+    },
+    flatlistPadding:{
+      paddingBottom: 60,
+    },
+    productImage: {
+      width: 120,
+      height: 120,
+      backgroundColor: "transparent",
+      opacity: 1,
+      marginTop: 14
+    },
+    text:{
+      alignSelf:"center",
+      marginTop:5
+    },
+    noDataView:{
+      justifyContent:"center",
+      flex:1
+    },
+  });

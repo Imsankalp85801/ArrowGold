@@ -21,3 +21,48 @@ export function getCategorybyId(id) {
     }).catch(response => {});
   }
 }
+
+export function getProductListing(productId) {
+  return async (dispatch)=>{
+    let http = await request(url.URL);
+    dispatch({
+      type: action.GET_PRODUCT_LISTING,
+      payload: http.post(`/product-listing/${productId}`)
+    }).catch(response => {});
+  }
+}
+
+export function getProductDetails(productId,token) {
+  return async (dispatch)=>{
+    let http = await request(url.URL);
+    dispatch({
+      type: action.GET_PRODUCT_DETAILS,
+      payload: http.get(`/product/${productId}`,{
+        headers: {
+            'Authorization': 'Bearer'+" "+token,
+            }
+        })
+    }).catch(response => {});
+  }
+}
+
+export function addToCart(body,token) {
+  return async (dispatch)=>{
+    let http = await request(url.URL);
+    dispatch({
+      type: action.ADD_TO_CART,
+      payload: http.post(`/cart`,body,{
+        headers: {
+            'Authorization': 'Bearer'+" "+token,
+            }
+        })
+    }).catch(response => {});
+  }
+}
+
+export function resethomeData(){
+  return (dispatch)=>
+  dispatch({
+      type: action.RESET_HOME_DATA,
+  });
+}

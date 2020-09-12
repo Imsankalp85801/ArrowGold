@@ -9,8 +9,8 @@ import {Overlay} from 'react-native-elements'
 var width = Dimensions.get('window').width; //full width
 var height = Dimensions.get('window').height; //full height
 
-// import SuccessImage from  '../../../assets/images/success.svg';
-// import FailedImage from  '../../../assets/images/failed.svg';
+import SuccessImage from  '../../../assets/images/success.svg';
+import FailedImage from  '../../../assets/images/failed.svg';
 import QButton from './QButton';
 
 export default function Popup(props){ 
@@ -18,14 +18,14 @@ export default function Popup(props){
 
   function getImage(){
 
-    // if(notUndefinedAndNull(props.success) && props.success){
-    //     return (<SuccessImage height={150} width={150} />)
+    if(notUndefinedAndNull(props.success) && props.success){
+        return (<SuccessImage height={150} width={150} />)
       
-    // }else if(notUndefinedAndNull(props.success) && !props.success){
-    //     return (<FailedImage height={150} width={150} />)
-    //    }else{
-    //     return null;
-    // }
+    }else if(notUndefinedAndNull(props.success) && !props.success){
+        return (<FailedImage height={150} width={150} />)
+       }else{
+        return null;
+    }
 
   }
 

@@ -19,8 +19,12 @@ export default function Dashboard() {
   let navigation = useNavigation();
 
   useEffect(()=>{
+      const unsubscribe = navigation.addListener('focus', () => {
         dispatch(homeAction.getMenu()) 
-  }, [])
+      });
+  
+      return unsubscribe;
+  }, [navigation])
 
 
   function getMenuImagePath(path){
@@ -46,6 +50,17 @@ export default function Dashboard() {
                   <TouchableOpacity onPress={() =>navigation.navigate('CategoryDetails',{item:item})}>
                     <View style={styles.imageContainer}>
                       <Image source={{ uri : getMenuImagePath(item.cat_image)}} style={styles.productImage} resizeMode="contain" ></Image>
+                      <QText
+                      fontWeight='regular'
+                      fontSize='medium'
+                      style={styles.text}
+                      numberOfLines={1} 
+                      ellipsizeMode="tail"
+                      >
+                      {item.cat_name.length < 15
+                          ? `${item.cat_name}`
+                          : `${item.cat_name.substring(0, 15)}...`}
+                  </QText>
                     </View>
                   </TouchableOpacity>
               </Fragment>
@@ -143,5 +158,9 @@ const styles = StyleSheet.create({
     },
     flatlistPadding:{
       paddingBottom: 60,
+    },
+    text:{
+      alignSelf:"center",
+      marginTop:5
     },
 });
