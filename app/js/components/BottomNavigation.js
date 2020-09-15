@@ -7,7 +7,7 @@ import { Avatar, Divider, Icon, Overlay, getIconType } from 'react-native-elemen
 import Dashboard from '../screens/dashboard/Dashboard';
 import Catalog from '../screens/catalog/Catalog';
 import Search from '../screens/search/Search';
-
+import Cart from '../screens/cart/Cart';
 
 import Colors from '../constants/Colors';
 import { color } from 'react-native-reanimated';
@@ -53,7 +53,7 @@ export default function BottomNavigation(props){
             {renderTabs('Catalog',Catalog,"search1",true,'antdesign')}
             {renderTabs('Search',Search,"search1",true,'antdesign')}
             {renderTabs('My Order',Catalog,"search1",true,'antdesign')}
-            {renderTabs('Cart',Dashboard,"shoppingcart",true,'antdesign')}
+            {renderTabs('Cart',Cart,"shoppingcart",true,'antdesign')}
         </Tab.Navigator>
     )
 }

@@ -2,11 +2,14 @@ import {combineReducers} from 'redux'
 import login from './LoginReducer';
 import { LOGOUT } from '../../utils/Actions';
 import home from './HomeReducer';
+import cart from './CartReducer';
+
 
 
 const appReducer = combineReducers({
     login,
-    home
+    home,
+    cart
 });
 
 const reducer = (state, action) => {

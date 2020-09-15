@@ -17,6 +17,8 @@ export default function CartQuantityController(props) {
     if(quantity < maxQuantity) {
       newQty = qty + 1
       setQuantity(qty + 1)
+      console.log("qty",newQty)
+
       props.onQtyIncrease && props.onQtyIncrease(newQty,obj)
     }
   }

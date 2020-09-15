@@ -9,7 +9,6 @@ const initialState = {
     productListing:null,
     productDetails:null,
     addToCart:null,
-    summaryCart:[]
 };
 
 export default function HomeReducer(state = initialState, action) {
@@ -27,7 +26,9 @@ export default function HomeReducer(state = initialState, action) {
                 categoryDetails:null,
                 productListing:null,
                 productDetails:null,
-                addToCart:null
+                addToCart:null,
+                summaryCart:[]
+
             }
         case actions.pending(actions.MENU):
             
@@ -142,26 +143,6 @@ export default function HomeReducer(state = initialState, action) {
 
         case actions.rejected(actions.ADD_TO_CART):
 
-            return {
-                ...state,
-                showLoader: false,
-            }
-
-        case actions.pending(actions.GET_SUMMARY):
-            return {
-                ...state,
-                showLoader: true,
-            }
-
-        case actions.fulfilled(actions.GET_SUMMARY):
-            return {
-                ...state,
-                showLoader: false,
-                summaryCart:action.payload.data.data
-                
-            }
-
-        case actions.rejected(actions.GET_SUMMARY):
             return {
                 ...state,
                 showLoader: false,

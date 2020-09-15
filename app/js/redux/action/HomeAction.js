@@ -60,20 +60,7 @@ export function addToCart(body,token) {
   }
 }
 
-export function getSummaryOfCart(token) {
-  console.log(token)
-  return async (dispatch)=>{
-    let http = await request(url.URL);
-    dispatch({
-      type: action.GET_SUMMARY,
-      payload: http.post(`/cart-summary`,null,{
-        headers: {
-            'Authorization': 'Bearer'+" "+token,
-            }
-        })
-    }).catch(response => {});
-  }
-}
+
 
 export function resethomeData(){
   return (dispatch)=>

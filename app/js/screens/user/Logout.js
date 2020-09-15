@@ -8,11 +8,11 @@ export default function Logout(props){
     let dispatch = useDispatch();
     
     useEffect(()=>{
+        console.log("LOG")
         const removeSession = async () => {
             await clearSession()
             dispatch(loginAction.logout())
         }
-
         removeSession();
     },[])
 

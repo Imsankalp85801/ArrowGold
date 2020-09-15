@@ -9,7 +9,7 @@ import HeaderDesign from '../components/HeaderDesign';
 import { Ionicons } from '@expo/vector-icons';
 import { HeaderBackButton } from '@react-navigation/stack'
 import CartHeader from './CartHeader';
-import * as homeAction from  '../redux/action/HomeAction';
+import * as cartAction from  '../redux/action/CartAction';
 
 
 import AppHome from './AppHome';
@@ -17,6 +17,8 @@ import Logout from './user/Logout';
 import CategoryDetails from './dashboard/CategoryDetails';
 import ProductListing from './dashboard/ProductListing';
 import ProductDetails from './dashboard/ProductDetails';
+import Cart from '../screens/cart/Cart';
+
 import { getToken } from '../services/Session';
 
 
@@ -33,10 +35,11 @@ export default function NavigationHome(props){
     let store = useSelector(connectToStore, shallowEqual);
 
     useEffect(()=>{
+        console.log("addToCart")
         const getSummaryCart = async () => {
             let token = await getToken();
             if(notUndefinedAndNull(token)){
-                dispatch(homeAction.getSummaryOfCart(token));
+                dispatch(cartAction.getSummaryOfCart(token));
             }
         }      
          getSummaryCart();
@@ -85,6 +88,7 @@ export default function NavigationHome(props){
             {renderNavigationRoute("CategoryDetails",CategoryDetails,true,'Category Details')}
             {renderNavigationRoute("ProductListing",ProductListing,true,'Product Listing')}
             {renderNavigationRoute("ProductDetails",ProductDetails,true,'Product Details')}
+            {renderDasboardRoute("Cart",Cart,true,'Cart')}
 
 
         </Stack.Navigator> 

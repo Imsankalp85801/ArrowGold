@@ -19,7 +19,6 @@ import SupportIcon from "../../../assets/images/payment_details.svg";
 import LogoutIcon from "../../../assets/images/logout.svg";
 import { func } from 'prop-types';
 let Drawers = createDrawerNavigator()
-// let studentDefaultAvatar=Image.resolveAssetSource(studentAvatar).uri;
 
 export default function NavigationDrawer(props){
 
@@ -93,9 +92,6 @@ export default function NavigationDrawer(props){
 function connectToStore(store){
   return {
       userDetails: store.login.userDetails,
-      // parentDetails:store.parent.parentDetails,
-      // studentDetails: store.student.studentDetails,
-      // teacher: store.teacher.teacherDetails,
   }
 }
 

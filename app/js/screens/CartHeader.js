@@ -39,7 +39,7 @@ export default function CartHeader(props){
 function connectToStore(store){
     return {
         addToCart: store.home.addToCart,
-        summaryCart: store.home.summaryCart,
+        summaryCart: store.cart.summaryCart,
     }
 }
 

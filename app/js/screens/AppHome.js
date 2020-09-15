@@ -41,25 +41,6 @@ export default function AppHome(){
 }
 function connectToStore(store){
     return{
-        // user: store.user.user,
-        // studentDetails: store.student.studentDetails,
-        // fetchingGlobalScreenConfig: store.uiConfig.fetchingGlobalScreenConfig,
-        // fetchingConsumerScreenConfig: store.uiConfig.fetchingConsumerScreenConfig,
-        // listAcademicYears: store.branch.listAcademicYears,
-        // currentAcademicYear: store.branch.currentAcademicYear,
-        // academicYears: store.branch.academicYears,
-        // studentsList: store.parent.studentsList,
-        // parentDetails : store.parent.parentDetails,
-        // consumerScreenConfig: store.uiConfig.consumerScreenConfig,
-        // branch: store.branch.branch,
-        // institute: store.institute.institute,
-        // configuredMenuList: store.institute.configuredMenuList,
-        // showInstituteLoader:store.institute.showLoader,
-        // showUiConfigLoader:store.uiConfig.showLoader,
-        // studentLoader:store.student.showLoader,
-        // branchLoader:store.branch.showLoader,
-        // teacherDetails: store.teacher.teacherDetails ,
-
 
     }
 }
